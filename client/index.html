@@ -1,0 +1,48 @@
+<!doctype html>
+    <html lang="en" ng-app="shopApp">
+    
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!--<meta content="/images/branding/googleg/1x/googleg_standard_color_128dp.png" itemprop="image">-->
+        <link href="/images/favicon.ico" rel="shortcut icon">
+
+
+        <script src="../node_modules/angular/angular.min.js"></script>
+        <script src="../node_modules/angular-route/angular-route.min.js"></script>
+
+        <script src="app.js"></script>
+        <script src="service.js"></script>
+        <script src='./filter.js'></script>
+        <script src="config.js"></script>
+        <script src="./home/home.controller.js"></script>
+        <script src="./login/LoginCtrl.js"></script>
+        
+        <link rel="stylesheet" type= "text/css" href='main.css'>
+        <link rel="stylesheet" type= "text/css" href='./home/home.css'>
+        <link rel="stylesheet" type="text/css" href='./login/login.css'>
+       
+    </head>
+    
+    <body class="container" ng-controller="shopController">
+        <nav class="navbar">
+            <div class="container-fluid">
+            <div class="navbar-header">
+            <a class="navbar-brand" href="#!"><img id="logo" src="images/logo.png" alt="Fresh Direct"></a>
+            
+            </div>
+            <div class="float-right navbar-brand">
+                    <div class="" >&#9742 1866-283-7374 | &#x2709 <span class="">freshdirect@gmail.com</span></div>
+                    <div class="float-right" ng-show="loggedin" class="float-right">Welcome {{ mainData.userName }} <a ng-click="logout()">logout</a></div>
+                    </div>
+                </div>
+            
+        </nav>
+        <div ng-view></div>
+     
+    </body>
+    
+    </html>

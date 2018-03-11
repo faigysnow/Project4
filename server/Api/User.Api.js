@@ -1,4 +1,4 @@
-var Ctrl = require('../controllers/member.controller.js');
+var Ctrl = require('../controllers/User.Controller.js');
 var express = require('express');
 var router = express.Router();
 

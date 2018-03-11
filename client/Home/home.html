@@ -1,0 +1,62 @@
+<div ng-controller="login"><!--to do -->
+<div class="home-flex-container">
+  <div class="home-flex-item">
+      <div class="form-login" ng-hide="isLoggedin">
+          <h4 class="">Registered?</h4>
+
+          <label for="loginName">Username</label>
+          <input vaue=Faigy type="name" ng-model="user.name" class="form-control marg-bottom" 
+          placeholder="Username" required autofocus> <!--to do model and service -->
+          <label for="inputPassword">Password</label>
+          <input value=1234 type="password" ng-model="user.password" class="form-control marg-bottom" placeholder="Password" required>
+<!--to do controller signin-->
+          <button class="btn btn-lg green" type="submit" ng-click="login(user)">Log in</button><br>
+          <span class="error" id="login_error"></span>
+          <!--to do controller signup -->
+          <h5 class="">Not Registered? <a href="#!signUp">Sign up</a></h5>
+          <div ng-model="loginErr" class="bg-danger">{{loginErr}}</div> <!--to do -->
+
+      </div>
+    <!--to do  -->
+      <button ng-show="isLogedin" class="btn btn-lg orange"><a href="#!shop">{{userDetails.button}}</a></button><br>
+      <br>
+
+  </div>
+
+<section class= "home-flex-item"><!-- to do in css-->
+ <div>Fresh Direct: The freshest groceries</div> 
+</section>
+
+
+
+hgkjhkjh
+<section>
+  <div class="home-flex-item">
+      <img class="w-50 marg-bottom" src="download image cart" alt="Fresh Direct">
+      <br>
+      <h4>
+          Products: {{statistics.products}}<br> Orders: {{statistics.orders}}<br>
+      </h4>
+      <div class="yellow padding-all" ng-switch="userDetails.shopping_cart.status">
+          <div ng-switch-when="open">
+              {{userDetails.button = "Resume Shopping"}}
+              <span>{{userDetails.name}}, you have a open shopping cart, from: {{userDetails.shopping_cart.date | date: 'dd/MM/yyyy'}}. <br> of total price of: {{userDetails.shopping_cart.price}}.
+              </span>
+          </div>
+          <div ng-switch-when="closed">
+              {{userDetails.button = "Start Shopping"}}
+              <span>{{userDetails.name}}, your last purches was at: {{userDetails.shooping_cart.date | date: 'dd/MM/yyyy'}}. <br> of total price of: {{userDetails.shooping_cart.price}}.
+              </span>
+          </div>
+          <div ng-switch-when="new">
+              {{userDetails.button = "Start Shopping"}}
+              <span>{{userDetails.name}}, welcome to jsMarket, enjoy your shopping.
+              </span>
+          </div>
+
+          <div ng-switch-default>
+              <span>Please login
+              </span>
+            </section>
+          </div>
+      </div>
